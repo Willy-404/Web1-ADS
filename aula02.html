@@ -1,65 +1,103 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!---->
-        <title>HTML</title>
-        <Style>
+        <!-- configurar o seu documento HTML-->
+         <title>HTML</title>
+         <style>
             table,td{
                 border-collapse: collapse;
-                border: 1px solid red;
+                border-color: crimson
             }
-        </Style>
+         </style>
     </head>
     <body>
-        <h1>Título nível 1</h1>
-        <h2>Título nível 2</h2>
-        <h3>Título nível 3</h3>
-        <h4>Título nível 4</h4>
-        <h5>Título nível 5</h5>
-        <h6>Título nível 6</h6>
-        <p>Isto é um paragrafo HTML</p>
-        <span>Isso é um Span</span>
-        <span>Isso também é um Span</span>
+        <h1> Titulo de nivel 1 em HTML</h1>
+        <h2> Titulo de nivel 2 em HTML</h2>
+        <h3> Titulo de nivel 3 em HTML</h3>
+        <h4> Titulo de nivel 4 em HTML</h4>
+        <h5> Titulo de nivel 5 em HTML</h5>
+        <h6> Titulo de nivel 6 em HTML</h6>
 
-        <p>Os elementos html possuem uma exibição ou display <i>inline</i> ou <em>block.</em></p>
-        <p>block é uma exibição que vai da margem esquerda até a margem direita.
-            Por padrão, elementos com exibição block não dividem espaço na horizontal com outros elementos.
-        </p>
-        <p>Inline é uma exibição que permite que o elemento seja exibido dentro de uma linha com outros elementos
-             como um elemento textual. <span>Ben 10 Negro pode se transformar em 10 aliens negros diferentes</span></p>
+        <p> isso mesmo que vc esta lendo, isso é um paragrafo </p>
+        
+        <span>isso mesmo, isso é um span</span>
+    
+        <h1>DIsplay dos elementos no HTML</h1>
+    
+        <p>OS elementos no HTML possuem uma exibição ou display <b>inline</b> ou block</p>
+        <p>Block - Exibição inicial na esquerda ate a direita, podendo determinar a altura e largura. Por padrão, esses elementos não dividem espaço na horizontal com outros elementos</p>
+        <p>Innline - permite que o elemento seja apresentado dentro dentro de uma linha com outros elementos</p>
 
-        <img src="./imgs/A.jpg" alt="Ben10 Negro">
-        <ul draggable="true">
-        <li>item da lista1</li>
-        <li>item da lista2</li>
-        <li>item da lista3</li>
-        <li>item da lista4</li>
-    </ul>
+     <img src="./imagem/A.jpg" alt="Ben 10 Negro">
 
-    <ol>
-    <li>item da lista</li>
-    <li>item da lista</li>
-    <li>item da lista</li>
-    <li>item da lista</li>
-    </ol>
+     <ul>
+        <li>item da lista 1</li>
+        <li>item da lista 2</li>
+        <li>item da lista 3</li>
+        <li>item da lista 4</li>
+     </ul>
 
-    <table>
+     <ol TYPE="I" start="1">
+        <li>item da lista 1</li>
+        <li>item da lista 2</li>
+        <li>item da lista 3</li>
+        <li>item da lista 4</li>
+     </ol>
+
+     <table>
+        <thead>
+            <tr>
+                <td>Titulo</td><td>Primeiro</td><td>Segundo</td>
+            </tr>
+       </thead>
         <tr>
-            <th>A</th><th>B</th><th>C</th>
+            <th>a</th><th>b</th><th>c</th>
         </tr>
         <tr>
-            <td>A</td><td>B</td><td>C</td>
+            <td>1</td><td>2</td><td>3</td>
         </tr>
-        <tr>
-            <td>A</td><td>B</td><td>C</td>
-        </tr>
-        <tr>
-            <td>A</td><td>B</td><td>C</td>
-        </tr>
-    </table>
+     </table>
 
+     <h1>HyperLink</h1>
+     <a href="https://pt.wikipedia.org/wiki/Brasil"> Link wiki Brasil</a>
 
+     <h1>Formulario</h1>
+     <div>
+        <p></p>
+        <form action="https://google.com/search">
+            <input type="input" placeholder="Entre com termo de pesquisa" name="q">
+
+            <input type="submit" value="Pesquisar">
+        </form>
+    </div>
+
+    <h1>Canvas</h1>
+    <canvas id="canvas" height="1080px" width="920px"></canvas>
+
+    <script>
+        //codigo JavaScript
+        let ctx = canvas.getContext("2d")
+        ctx.moveto(0,0)
+        ctx.lineTo(920, 1080)
+        ctx.stroke()
+        var desenho=false;
+        canvas.addEventListener("mousedown", (eventoMouse)=>{
+            ctx.moveTo(eventoMouse.offsetX, eventoMouse.offsetY)
+            desenho=true;
+        });
+
+        canvas.addEventListener("mouseup", ()=>{
+            desenho = false;
+        });
+        
+        canvas.addEventListener("mousemove", (eventoMouse)=> {
+            if(desenho){
+                ctx.lineTo(eventoMouse.offsetX, eventoMouse.offsetY)
+                ctx.stroke()
+                }
+            
+        }
+            );
+    </script>
     </body>
-
-
 </html>
