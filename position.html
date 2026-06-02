@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        #TITULO{
+            color: purple;
+        }
+        #container{
+            position: relative;
+            height : 500px;
+            width : 500px;
+            border : 10px solid purple;
+        }
+        #container>*{
+            display : block;
+            border : 1px solid black;
+            width : 100px;
+            height : 100px
+        }
+        #box1{
+            position : relative;
+            left : 400px;
+        }
+        #box2{
+            position : fixed;
+            background-color: blue;
+            left : 0px;
+            bottom: 0px;
+        }
+        #box3{
+            position: absolute;
+            top : 1px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 id="TITULO">positions</h1>
+    </div>
+
+    <div id="container">
+        <div id="box1">box1</div>
+        <div id="box2">box2</div>
+        <div id="box3">box3</div>
+        <div id="box4">box4</div>
+        <div id="box5">box5</div>
+    </div>
+
+</body>
+</html>
